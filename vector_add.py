@@ -75,7 +75,7 @@ def custom_kernel(data: input_t) -> output_t:
     Returns:
         Tensor containing element-wise sum.
     """
-    A, B = data
+    A, B, _ = data
 
     assert A.is_cuda and B.is_cuda, "Input tensors must be on GPU"
     assert A.shape == B.shape, "Input tensors must have the same shape"
